@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
-
-const userSchema = new mongoose.Schema({
+//wishlistSchema
+const wishlistSchema = new mongoose.Schema({
     id: {
         type: Number,
         required:true,
@@ -30,23 +30,13 @@ const userSchema = new mongoose.Schema({
         type: String,
         required:true,
         trim:true
-    },
-    rating: {
-        rate: {
-            type: Number,
-            required:true
-        },
-        count: {
-            type: Number,
-            required:true
-        }
     }
 })
 
 //to cretae model
-const products = new mongoose.model("products",userSchema)
+const wishlists = new mongoose.model("wishlists",wishlistSchema)
 
 
 
 //export model
-module.exports = products
+module.exports = wishlists
